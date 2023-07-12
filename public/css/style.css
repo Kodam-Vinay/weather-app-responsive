@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Piazzolla:wght@900&family=Poppins:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -19,6 +18,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column; 
+    font-family: 'Poppins', sans-serif;
 }
 
 .row{
@@ -212,7 +212,6 @@ footer p{
     background: #323544;
     border-radius: 1rem;
     padding: 1rem;
-    font-family: "Roboto", "sans-serif";
 }
 
 .top_layer{

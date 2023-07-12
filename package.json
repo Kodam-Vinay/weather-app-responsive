@@ -2,9 +2,10 @@
   "name": "weatherapp",
   "version": "1.0.0",
   "description": "this is a weather app built using express js",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "vinay",
   "license": "ISC",

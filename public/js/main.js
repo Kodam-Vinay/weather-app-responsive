@@ -22,14 +22,6 @@ const getDay = () =>{
     today_date.innerText = `${date.getDate()} ${presentMonth.toUpperCase()}`
 }
 getDay()
-
-console.log(date)
-localTime = date.getTime()
-localOffset = date.getTimezoneOffset() * 60000
-utc = localTime + localOffset
-var atlanta = utc + (1000 * -14400)
-nd = new Date(atlanta)
-console.log(nd)
 getResults = async(event) => {
     event.preventDefault();
     let cityValue = enterCityName.value;
