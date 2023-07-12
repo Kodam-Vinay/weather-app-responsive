@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+    <!-- for navbar(header) -->
+    {{>header}}
+
+    <!-- main body part -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto">
+                <div class="col-12 main_header_left align-items-center">
+                        <!-- we can use figure to add image it has more features -->
+                    <figure> 
+                        <img src="./images/errorPage.jpg" alt="profile" title="my_profile" class="error-image"/>
+                    </figure>
+                    <p>Weather App By <span class="heading-span">Vinay</span></p>
+                    <h1>{{errorMsg}}</h1>
+                    <a href="/">
+                        <button class="btn btn-light">Go Back</button>
+                    </a>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+</body>
+</html>

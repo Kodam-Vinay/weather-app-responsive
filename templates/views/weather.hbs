@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+    <!-- for navbar(header) -->
+    {{>header}}
+
+    <!-- main body part -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-12">
+                <div class="weather-container">
+                    <form class="search-container">
+                        <input type="search" placeholder="Enter Your City Name" autocomplete="off" id="enterCityName"/>
+                        <button type="submit" id="submitButton">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="main_result_container">
+                    <div class="top_layer">
+                        <p id="day">Tuesday</p>
+                        <p id="today_date">13 OCT</p>
+                    </div>
+                    <div class="main_layer">
+                        <div class="city_name-time">
+                            <p id="city_name">Get Output Here</p>
+                            <p id="presenet_time">10:20</p>
+                        </div>
+                        <div class="spinner-border show-spinner" role="status" id="spinner">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div class="temp_show-container data_hide">
+                            <p id="temp"><span id="actual_temp">0</span><sup>o</sup> C</p>
+                            <div> 
+                            <p id="temp_status"><i class="fa fa-cloud"></i></p>
+                            <p id="temp_actual_status">Sun</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+
+    {{!-- here we need script --}}
+    <script src="js/main.js"></script>
+</body>
+</html>

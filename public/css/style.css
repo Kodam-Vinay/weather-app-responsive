@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Piazzolla:wght@900&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg: #1e272e; /* we can add specify variable like this we can use when we want */
+    --main-color: #0097c6;
+}
+
+html{
+    font-size: 62.5%; /* if we specify this then 1rem=10px*/
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+.row{
+    margin: 0; /* to remove horizontal scroll we are removing margin*/
+}
+
+
+/* navbar */
+.main_menu{
+    background-color: var(--main-bg); /*here we are using that variable defined inside root*/
+}
+
+
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+
+.fa-heart{
+    font-size: 2rem;
+    margin: 0.5rem;
+    /* we need to add the transition also so that it rounds */
+    transition: all linear; /*here linear is momentum*/
+    animation: rotate 2s linear infinite; /*name, duration, timing function, itertaion*/
+}
+
+@keyframes rotate{
+    /* it round rotate completely so */
+    0%{
+        transform: rotate(0deg);
+    }
+    60%{
+        transform: rotate(360deg);
+    }
+}
+
+.website-logo{
+    height: 40px;
+    width: 40px;
+}
+
+.navbar-toggler{ /*hamburger button*/
+    background-color: #fff;
+}
+.navbar-nav a{
+    margin-left: 2.4rem; /*in smaller device we need left margin for nav links*/
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+
+/* main body part */
+.main_header_left{
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_header_right{
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p {
+    font-size: 2rem;
+}
+.main_header_left h1 {
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.heading-span{
+    color: var(--main-color);
+}
+
+.main_header_left button {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0.8rem 1.8rem; /*up,down left,right*/
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000; /*vertical horizontal blur spread*/
+}
+
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+/* footer code */
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto; /*we give height 100vh and display:flex to body because we need margin top*/
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 5rem;
+}
+
+.carousel-image{
+    height: 40rem;
+    width: 40rem;
+}
+
+#carouselExampleInterval{
+    height: 40rem;
+    width: 40rem;
+}
+
+.error-image{
+    width: 40rem;
+}
+
+.weather-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.search-container{
+    width: 50%;
+    position: relative;
+    margin: 10rem auto 3rem;
+}
+
+.search-container input[type="search"]{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #1e202b;
+    color: #fff;
+    outline: none;
+    border: 0;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.search-container button{
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 3rem;
+    background: #009ad8;
+    color: #fff;
+    border-radius: 3rem;
+}
+.search-container button:hover{
+    color: #009ad8;
+    background: #fff;
+}
+.search-container i{
+    font-size: 3rem;
+}
+
+.main_result_container{
+    width: 50rem;
+    margin: auto;
+    min-height: 20rem;
+    background: #323544;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: "Roboto", "sans-serif";
+}
+
+.top_layer{
+    width: 100%;
+    height: 20%;
+    background: #323f4b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.top_layer p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.main_layer .city_name-time #city_name{
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.main_layer .city_name-time #presenet_time{
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.main_layer .temp_show-container{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.main_layer .temp_show-container p,
+.main_layer .temp_show-container .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.fa{
+    color: #009ad8;
+}
+
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+
+.data_hide{
+    display: none;
+    visibility: hidden;
+    transition: all 0.3s da;
+}
+
+.show-spinner{
+    display: none;
+    visibility: hidden;
+    margin: auto;
+}
+
+#temp_actual_status{
+    margin-top: -2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.main_header_right figure img{
+    filter: drop-shadow(0, 0.5rem, 1rem, rgba(0,0,0,0));
+}
+
+.city_name-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* responsive code*/
+@media(max-width: 768px){
+    .main_header{
+        overflow-y: auto;
+    }
+
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0; /*up,down left,right*/
+    }
+
+    .main_header_right{
+        height: auto;
+        overflow-y: auto;
+    }
+    .error-image{
+        width: 30rem;
+    }
+    .search-container{
+        width: 100%;
+    }
+    .main_result_container{
+        width: 30rem;
+    }
+    .main_layer #city_name{
+        font-size: 1.5rem;
+    }
+    .main_layer .temp_show-container{
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+    }
+    .main_layer .temp_show-container p,
+    .main_layer .temp_show-container .fa{
+    font-size: 4rem;
+    font-weight: 900;
+    }
+    sup{
+        font-size: 4rem;
+        margin-top: -2rem;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+    <!-- for navbar(header) -->
+    {{>header}}
+
+    <!-- main body part -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto d-flex flex-column flex-md-row align-items-center p-3">
+                <div class="col-12 col-md-6 main_header_right align-items-center">
+                        <!-- we can use figure to add image it has more features -->
+                    <figure> 
+                        <img src="./images/profile.jpg" alt="profile" title="my_profile" class="w-50"/>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6 main_header_left">
+                    <p><span class="heading-span">Vinay Kumar Kodam</span></p>
+                    <h1>Iam a <span class="heading-span">Full Stack</span> Web Developer</h1>
+                    <a href="https://www.linkedin.com/in/vinay-kumar-kodam-4054bb21b/" target="_blank">
+                        <button class="btn btn-light">About</button>
+                    </a>
+                </div>
+                
+            </div>
+        </div>  
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+</body>
+</html>
